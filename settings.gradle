@@ -1,0 +1,7 @@
+/*
+ * Created by Tareq Islam on 8/7/18 10:35 PM
+ *
+ *  Last modified 8/7/18 10:35 PM
+ */
+
+include ':app', ':pushdown_ext_onclick_single'

@@ -1,0 +1,8 @@
+<!--
+  ~ Created by Tareq Islam on 8/7/18 10:35 PM
+  ~
+  ~  Last modified 8/7/18 10:35 PM
+  -->
+
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.mti.pushdown_ext_onclick_single" />
