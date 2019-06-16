@@ -14,19 +14,20 @@ It is a lib for using singleClickListener and PushDown Anim Together
 
 
 ## How to Use Without Anim:
-
+```
 
         SingleClick.get(findViewById(R.id.mButton)).setOnSingleClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
 
                 Toast.makeText(MainActivity.this, "Clicked ", Toast.LENGTH_SHORT).show();
-              
+                  v.performHapticFeedback(HapticFeedbackConstants.VIRTUAL_KEY); //for onclick vibration
             }
         });
+```
 
 ## How to Use SingleclikListener with push-anim by Thai android developer.=>[ push down animation click](https://github.com/TheKhaeng/pushdown-anim-click?utm_source=android-arsenal.com&utm_medium=referral&utm_campaign=6821)
-
+```
 //Todo: With Anim Single Click Listener
         PushDownAnim.setPushDownAnimTo(findViewById(R.id.mButton)).setOnSingleClickListener(new View.OnClickListener() {
             @Override
@@ -34,9 +35,10 @@ It is a lib for using singleClickListener and PushDown Anim Together
 
                 Toast.makeText(MainActivity.this, "Clicked ", Toast.LENGTH_SHORT).show();
                 
+                    v.performHapticFeedback(HapticFeedbackConstants.VIRTUAL_KEY); //for onclick vibration
             }
         });
-
+```
 # For more push Animation Docs please visit [ HERE](https://github.com/TheKhaeng/pushdown-anim-click?utm_source=android-arsenal.com&utm_medium=referral&utm_campaign=6821) .
 
 
