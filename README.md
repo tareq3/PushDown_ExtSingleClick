@@ -9,7 +9,7 @@ It is a lib for using singleClickListener and PushDown Anim Together
 ```
 ### needed dependencies:
 ```
-    implementation 'com.github.tareq3:PushDown_ExtSingleClick:1.0'
+    implementation 'com.github.tareq3:PushDown_ExtSingleClick:2.0.0'
 ```
 
 

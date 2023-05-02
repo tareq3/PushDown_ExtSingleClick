@@ -6,10 +6,12 @@
 
 package com.mti.pushdown_extsingleclick;
 
-import android.support.v7.app.AppCompatActivity;
+import android.app.Activity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Toast;
+
+import androidx.appcompat.app.AppCompatActivity;
 
 import com.mti.pushdown_ext_onclick_single.PushDownAnim;
 import com.mti.pushdown_ext_onclick_single.SingleClick;
@@ -23,38 +25,20 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
 
+        // Without animation
 
-
-
-
-
-
-
-
-
-
-
-        //Todo: If you want only singleClick Listener without anim
-
-
-        SingleClick.get(findViewById(R.id.mButton)).setOnSingleClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-
-                Toast.makeText(MainActivity.this, "Clicked "+ i, Toast.LENGTH_SHORT).show();
-                i++;
-            }
+        /*
+        SingleClick.get(findViewById(R.id.mButton)).setOnSingleClickListener(v -> {
+            Toast.makeText(MainActivity.this, "Clicked "+ i, Toast.LENGTH_SHORT).show();
+            i++;
         });
+        */
 
 
-        //Todo: With Anim Single Click Listener
-        PushDownAnim.setPushDownAnimTo(findViewById(R.id.mButton)).setOnSingleClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-
-                Toast.makeText(MainActivity.this, "Clicked "+ i, Toast.LENGTH_SHORT).show();
-                i++;
-            }
+        // With animation
+        PushDownAnim.setPushDownAnimTo(findViewById(R.id.mButton)).setOnSingleClickListener(v -> {
+            Toast.makeText(MainActivity.this, "Clicked "+ i, Toast.LENGTH_SHORT).show();
+            i++;
         });
     }
 }
