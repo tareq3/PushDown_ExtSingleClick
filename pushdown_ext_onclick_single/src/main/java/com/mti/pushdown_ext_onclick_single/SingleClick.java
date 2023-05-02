@@ -32,40 +32,22 @@ public class SingleClick {
     private WeakReference<View> weakView;
 
     public SingleClick(View view) {
-         this.weakView = new WeakReference<>(view) ;
-        this.weakView.get().setClickable( true );
+        this.weakView = new WeakReference<>(view);
+        this.weakView.get().setClickable(true);
     }
-
-
-
-
-
 
     //first we need to access the view
 
-    public static SingleClick get(View view){
-        SingleClick singleClick =new SingleClick(view);
+    public static SingleClick get(View view) {
+        SingleClick singleClick = new SingleClick(view);
         return singleClick;
     }
 
 
-
-
-
-
-
-
-
-
-
-
-
-
     private long mLastClickTime = 0; //just for resoving fast double click crash issue for DateTime Dialog
 
-    public SingleClick setOnSingleClickListener(final View.OnClickListener onClickListener){
-        if( weakView.get() != null ){
-
+    public SingleClick setOnSingleClickListener(final View.OnClickListener onClickListener) {
+        if (weakView.get() != null) {
 
 
             weakView.get().setOnClickListener(new View.OnClickListener() {
@@ -73,8 +55,8 @@ public class SingleClick {
                 public void onClick(View v) {
 
                     // mis-clicking prevention, using threshold of 1000 ms
-                    if (SystemClock.elapsedRealtime() - mLastClickTime < 1000){
-                        return ;
+                    if (SystemClock.elapsedRealtime() - mLastClickTime < 1000) {
+                        return;
                     }
                     mLastClickTime = SystemClock.elapsedRealtime();
 

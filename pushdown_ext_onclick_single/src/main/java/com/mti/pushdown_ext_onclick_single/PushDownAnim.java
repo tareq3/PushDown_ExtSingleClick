@@ -14,7 +14,6 @@ import android.animation.TimeInterpolator;
 import android.animation.ValueAnimator;
 import android.graphics.Rect;
 import android.os.SystemClock;
-import android.support.annotation.IntDef;
 import android.util.TypedValue;
 import android.view.MotionEvent;
 import android.view.View;
@@ -24,6 +23,8 @@ import java.lang.annotation.Retention;
 import java.lang.ref.WeakReference;
 
 import static java.lang.annotation.RetentionPolicy.SOURCE;
+
+import androidx.annotation.IntDef;
 
 /***
  * Created by Tareq on 07,August,2018.
